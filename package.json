@@ -1,6 +1,6 @@
 {
   "name": "wsh_test_tools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "工具包",
   "type": "module",
   "main": "./dist/wsh_test_tools.umd.cjs",
