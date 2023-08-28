@@ -24,7 +24,7 @@
 </template>
 <script>
   export default {
-    name: 'ElButton',
+    name: 'WshButton',
 
     inject: {
       elForm: {
@@ -62,10 +62,10 @@
         return (this.elFormItem || {}).elFormItemSize;
       },
       buttonSize() {
-        return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
+        return this.size 
       },
       buttonDisabled() {
-        return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.elForm || {}).disabled;
+        return  this.disabled
       }
     },
 
@@ -76,3 +76,6 @@
     }
   };
 </script>
+<style scoped>
+@import '../../../examples/styles/button.scss'
+</style>

@@ -1,11 +1,21 @@
 {
   "name": "wsh_test_tools",
   "version": "1.0.2",
+  "private": "false",
   "description": "工具包",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/wsh_test_tools.umd.cjs",
+  "module": "./dist/wsh_test_tools.js",
+  "exports":{
+    ".":{
+      "import": "./dist/wsh_test_tools.js",
+      "require": "./dist/wsh_test_tools.umd.cjs"
+    }
+  },
   "scripts": {
-    "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.js",
-    "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "major": "npm version major -m 'build: update major'",
     "minor": "npm version minor -m 'build: update minor'",
     "patch": "npm version patch -m 'build: update patch'",
@@ -17,21 +27,12 @@
   "keywords": [],
   "author": "wangsonghao",
   "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
   "devDependencies": {
-    "@babel/core": "^7.22.11",
-    "@babel/preset-env": "^7.22.10",
-    "@rollup/plugin-alias": "^5.0.0",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^25.0.4",
-    "@rollup/plugin-eslint": "^9.0.4",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.2.1",
-    "@rollup/plugin-replace": "^5.0.2",
-    "rollup": "^3.28.1",
-    "rollup-plugin-clear": "^2.0.7",
-    "rollup-plugin-filesize": "^10.0.0",
-    "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-serve": "^2.0.2",
-    "rollup-plugin-terser": "^7.0.2"
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "^1.66.1",
+    "vite": "^4.3.9"
   }
 }

@@ -1,4 +1,4 @@
-import WshButton from '../packages/button/index.js';
+import WshButton from '../packages/button/src/button.vue';
 
 const components = [
   WshButton,
