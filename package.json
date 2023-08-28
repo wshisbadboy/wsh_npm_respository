@@ -1,13 +1,13 @@
 {
   "name": "wsh_test_tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": "false",
   "description": "工具包",
   "type": "module",
   "main": "./dist/wsh_test_tools.umd.cjs",
   "module": "./dist/wsh_test_tools.js",
-  "exports":{
-    ".":{
+  "exports": {
+    ".": {
       "import": "./dist/wsh_test_tools.js",
       "require": "./dist/wsh_test_tools.umd.cjs"
     }
